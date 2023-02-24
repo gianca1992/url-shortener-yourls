@@ -1,11 +1,11 @@
 # url-shortener-yourls
-A step by step deployment guide for YOURLS https://github.com/YOURLS/YOURLS 
+A step by step deployment guide for [YOURLS](https://github.com/YOURLS/YOURLS).  
 
 Yourls is an open-source project allowing to run Your Own URL Shortener, on your server, using the domain or subdomain of your choice.
 
-I have deployed my own instance of YOURLS and shared in this repo a step by step guide based on https://yourls.org/docs/ 
+I have deployed my own instance of YOURLS and shared in this repo a step by step guide based on the [official docs](https://yourls.org/docs/).  
 
-Provision a Linux server and: 
+Provision a Ubuntu Linux server and: 
 
 ###  A 
 Install dependencies
@@ -28,7 +28,7 @@ mysql -u giancarlo -p
 create database yourls;
 ```
 ###  C 
-get the last release source code link from https://github.com/YOURLS/YOURLS/releases and configure the app.
+get the latest release [source code link](https://github.com/YOURLS/YOURLS/releases) and configure the app.
 
 
 ```
@@ -40,7 +40,7 @@ rm -rf YOURLS-1.9.1
 cp user/config-sample.php config.php
 nano config.php 
 ```
-Populate config.php with db credentials, yourls site, and yourls credentials https://yourls.org/docs/guide/essentials/configuration 
+Populate config.php with db credentials, yourls site, and yourls credentials as per [docs](https://yourls.org/docs/guide/essentials/configuration). 
 
 If root owns everything under/var/www/html/user ```chown -R www-data.www-data * ``` so that yourls can write to the conf file 
 
@@ -84,4 +84,4 @@ And at the end
 ```
 
 ### D
-Open port 80 then visit yourdomain.root/admin to configure yourls 
+Open port 80, then visit yourdomain.root/admin to configure yourls 
